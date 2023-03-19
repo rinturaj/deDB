@@ -1,1 +1,2 @@
-export declare function doSomeStuff(withThis: string, andThat: string, andThose: string[]): false | undefined;
+import DeDB from './core';
+export default DeDB;

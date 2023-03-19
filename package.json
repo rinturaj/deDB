@@ -1,11 +1,18 @@
 {
-  "name": "deDB",
+  "name": "@dedb",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
   "devDependencies": {
+    "@types/node": "^14.11.2",
     "gts": "^3.1.1",
-    "typescript": "~4.7.0",
-    "@types/node": "^14.11.2"
+    "nodemon": "^2.0.20",
+    "ts-loader": "^9.4.2",
+    "ts-node": "^10.9.1",
+    "typescript": "~4.7.0"
   },
   "scripts": {
+    "dev": "nodemon",
+    "start": "ts-node src/index.ts",
     "lint": "gts lint",
     "clean": "gts clean",
     "compile": "tsc",
@@ -13,5 +20,9 @@
     "prepare": "npm run compile",
     "pretest": "npm run compile",
     "posttest": "npm run lint"
+  },
+  "dependencies": {
+    "@ionic/storage": "^3.0.6",
+    "database-js": "^3.0.11"
   }
 }
